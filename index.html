@@ -343,12 +343,17 @@
   .t-card h4{font-size:24px; margin-bottom:8px;}
   .t-card p{color:var(--ink-soft); font-size:16.5px;}
   .t-media{
-    aspect-ratio:4/3; border:1px solid var(--line); background:linear-gradient(145deg,var(--ivory-deep),var(--paper));
+    aspect-ratio:5/6; border:1px solid var(--line); background:linear-gradient(145deg,var(--ivory-deep),var(--paper));
     display:flex; align-items:center; justify-content:center; color:var(--gold-deep); position:relative; overflow:hidden;
   }
   .t-media .ph-icon{width:34px; height:34px; opacity:.55;}
   .t-media span.ph-label{position:absolute; bottom:10px; font-family:'Marcellus'; font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:var(--ink-soft); opacity:.7;}
-
+  .t-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  }
   @media (max-width:760px){
     .timeline::before{left:22px;}
     .t-item{grid-template-columns:50px 1fr; gap:16px;}
@@ -546,7 +551,7 @@
   <h1 id="heroTitle" aria-label="Prerna and Dileep"></h1>
   <p class="hero-sub">request the honour of your presence as they begin forever</p>
   <div class="hero-date">
-    <span>Friday</span><span class="dot"></span><span>12 December 2026</span><span class="dot"></span><span>New Delhi</span>
+    <span>Friday</span><span class="dot"></span><span>12th December 2026</span><span class="dot"></span><span>Itawah</span>
   </div>
   <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
 </header>
@@ -567,7 +572,7 @@
     <div class="couple-wrap" style="margin-top:60px;">
       <div class="couple-card reveal">
         <div class="portrait">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+          <img src="images/prerna.jpeg" alt="Prerna" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
         </div>
         <h3>Prerna Verma</h3>
         <div class="role">The Bride</div>
@@ -576,7 +581,7 @@
       <div class="couple-amp reveal">&amp;</div>
       <div class="couple-card reveal">
         <div class="portrait">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+          <img src="images/dileep.jpeg" alt="Dileep" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
         </div>
         <h3>Dileep</h3>
         <div class="role">The Groom</div>
@@ -603,8 +608,7 @@
         </div>
         <div class="t-dot"></div>
         <div class="t-media">
-          <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
-          <span class="ph-label">Add Photo · first-meeting.jpg</span>
+          <img src="images/first_meet.jpeg" alt="First Meeting">
         </div>
       </div>
 
@@ -616,8 +620,7 @@
         </div>
         <div class="t-dot"></div>
         <div class="t-media">
-          <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
-          <span class="ph-label">Add Photo · proposal.jpg</span>
+          <img src="images/propose.jpeg" alt="Proposal">
         </div>
       </div>
 
@@ -629,8 +632,7 @@
         </div>
         <div class="t-dot"></div>
         <div class="t-media">
-          <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
-          <span class="ph-label">Add Photo · engagement.jpg</span>
+          <img src="images/the_shoot.jpeg" alt="Pre-Wedding">
         </div>
       </div>
 
@@ -642,74 +644,16 @@
         </div>
         <div class="t-dot"></div>
         <div class="t-media">
-          <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
-          <span class="ph-label">Add Photo · pre-wedding.jpg</span>
+        <img src="images/couple.jpeg" alt="Pre-Wedding">
+
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="section" id="gallery">
-  <div class="container">
-    <div class="section-label reveal">Captured Moments</div>
-    <h2 class="section-title reveal">Engagement &amp; Pre-Wedding Gallery</h2>
-    <p class="section-sub reveal">A few frames from the days that led us here. Click any tile to preview.</p>
 
-    <div class="gallery-grid" id="galleryGrid">
-      <!-- Gallery items are generated by JS below for easy replacement -->
-    </div>
-  </div>
-</section>
 
-<!-- VIDEOS -->
-<section class="section" id="memories" style="background:var(--ivory-deep);">
-  <div class="container">
-    <div class="section-label reveal">Watch &amp; Relive</div>
-    <h2 class="section-title reveal">Our Video Memories</h2>
-    <p class="section-sub reveal">Moments in motion — from the proposal to the pre-wedding films.</p>
-
-    <div class="video-grid">
-      <div class="video-card reveal">
-        <div class="video-frame">
-          <!-- Replace: <video controls poster="media/engagement-poster.jpg"><source src="media/engagement-video.mp4" type="video/mp4"></video> -->
-          <div class="play-btn">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <div class="video-caption">
-          <h4>Engagement Ceremony</h4>
-          <p>The moment we became officially "us."</p>
-        </div>
-      </div>
-
-      <div class="video-card reveal">
-        <div class="video-frame">
-          <div class="play-btn">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <div class="video-caption">
-          <h4>Pre-Wedding Film</h4>
-          <p>A short film of us, made with love.</p>
-        </div>
-      </div>
-
-      <div class="video-card reveal">
-        <div class="video-frame">
-          <div class="play-btn">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <div class="video-caption">
-          <h4>Behind the Scenes</h4>
-          <p>Candid, unscripted, and full of laughter.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- EVENTS -->
 <section class="section" id="events">
@@ -771,12 +715,19 @@
 
     <div class="venue-wrap">
       <div class="venue-map reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>
-        <span class="ph-label" style="font-family:'Marcellus'; font-size:11px; letter-spacing:.15em; text-transform:uppercase; opacity:.7;">Embed Google Map Here</span>
-      </div>
+  <iframe
+    src="https://www.google.com/maps?q=Vrindavan+Garden,+Etawah,+Uttar+Pradesh&output=embed"
+    width="100%"
+    height="100%"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
       <div class="venue-details reveal">
-        <h3>The Grand Ballroom</h3>
-        <p class="addr">Radiance Palace Gardens, Chattarpur Road, New Delhi – 110074</p>
+        <h3>Vrindavan Garden</h3>
+        <p class="addr">43, Civil Line, Civil Lines, Etawah, Uttar Pradesh 206001</p>
         <ul>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
@@ -785,10 +736,6 @@
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M7 3v4M17 3v4M3 11h18"/></svg>
             <span>Valet parking &amp; shuttle service available on-site</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16"/></svg>
-            <span>Indian formal / festive attire suggested</span>
           </li>
         </ul>
         <a href="#" class="btn">Get Directions</a>
