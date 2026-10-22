@@ -1096,20 +1096,30 @@
   }
 
   /* ---- Ambient music toggle ---- */
-  const musicBtn = document.getElementById('musicToggle');
-  const bgMusic = document.getElementById('bgMusic');
-  let musicPlaying = true;
-  musicBtn.addEventListener('click', () => {
-    if (!bgMusic.querySelector('source') || !bgMusic.querySelector('source').src){
-      musicBtn.title = 'Add media/background-music.mp3 to enable';
-      musicBtn.animate([{transform:'scale(1)'},{transform:'scale(1.15)'},{transform:'scale(1)'}], {duration:400});
-      return;
-    }
-    if (musicPlaying){ bgMusic.pause(); } else { bgMusic.play().catch(()=>{}); }
-    musicPlaying = !musicPlaying;
-    musicBtn.classList.toggle('active', musicPlaying);
-  });
+const musicBtn = document.getElementById('musicToggle');
+const bgMusic = document.getElementById('bgMusic');
+let musicPlaying = false;
 
+bgMusic.play().then(() => {
+  musicPlaying = true;
+  musicBtn.classList.add('active');
+}).catch(() => {
+  musicPlaying = false;
+  musicBtn.classList.remove('active');
+});
+
+musicBtn.addEventListener('click', () => {
+  if (bgMusic.paused) {
+    bgMusic.play().then(() => {
+      musicPlaying = true;
+      musicBtn.classList.add('active');
+    }).catch(() => {});
+  } else {
+    bgMusic.pause();
+    musicPlaying = false;
+    musicBtn.classList.remove('active');
+  }
+});
 })();
 </script>
 </body>
